@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Devgna Vyas Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Base Reset */
@@ -21,6 +22,9 @@
             color: #c9d1d9;
             padding: 20px;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         h1, h2 {
@@ -40,37 +44,32 @@
         /* Container Styling */
         .container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, auto);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            padding-bottom: 40px;
         }
 
         /* Card Styling */
         .card {
             background-color: #161b22;
             border: 2px solid #30363d;
-            border-radius: 10px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 30px 25px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            width: 100%;
-            min-height: 150px;
+            min-height: 200px;
             position: relative;
         }
 
         .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
         }
 
         .card h2 {
-            font-size: 24px;
+            font-size: 26px;
             margin-bottom: 10px;
             opacity: 0;
             animation: fadeIn 1s forwards;
@@ -87,9 +86,26 @@
         .icon {
             font-size: 40px;
             color: #58a6ff;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             opacity: 0;
             animation: fadeIn 0.8s forwards;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #0d1117;
+            background-color: #58a6ff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1f6feb;
         }
 
         /* Static Animation */
@@ -102,15 +118,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        /* Embed GitHub and LinkedIn */
-        iframe {
-            width: 100%;
-            height: 250px;
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
         }
 
         /* Responsive Design */
@@ -137,27 +144,22 @@
             text-align: center;
             padding: 20px;
             color: #8b949e;
+            font-size: 14px;
         }
 
-        /* LinkedIn Feed Grid */
-        .linkedin-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-            width: 100%;
+        footer a {
+            color: #58a6ff;
         }
 
-        @media (max-width: 768px) {
-            .linkedin-grid {
-                grid-template-columns: 1fr;
-            }
+        footer a:hover {
+            color: #1f6feb;
         }
     </style>
 </head>
 <body>
 
     <!-- Header -->
-    <header style="text-align:center; margin-bottom: 30px;">
+    <header style="text-align:center; margin-bottom: 50px;">
         <h1>Devgna Vyas</h1>
         <p>Cybersecurity Enthusiast | Linux Geek | Ethical Hacker | Open Source Contributor</p>
     </header>
@@ -182,7 +184,7 @@
             </div>
             <div class="project-card">
                 <h3>Project 2: CharuAI</h3>
-                <p>AI powered virtual assistant for CHARUSAT students and members.</p>
+                <p>AI-powered virtual assistant for CHARUSAT students and members.</p>
             </div>
         </div>
 
@@ -190,17 +192,17 @@
         <div class="card">
             <div class="icon">🛠️</div>
             <h2>Skills</h2>
-            <ul>
-                <li>Cybersecurity & Ethical Hacking</li>
-                <li>Linux Systems</li>
-                <li>Penetration Testing</li>
-                <li>Programming (C, C++, Rust, Python, Bash, JavaScript)</li>
-                <li>Open-source Software</li>
-                <li>Digital Forensics & Cybercrime</li>
+            <ul style="list-style:none; padding: 0; text-align:left;">
+                <li>✔️ Cybersecurity & Ethical Hacking</li>
+                <li>✔️ Linux Systems</li>
+                <li>✔️ Penetration Testing</li>
+                <li>✔️ Programming (C, C++, Rust, Python, Bash, JavaScript)</li>
+                <li>✔️ Open-source Software</li>
+                <li>✔️ Digital Forensics & Cybercrime</li>
             </ul>
         </div>
 
-       <!-- Contact Card -->
+        <!-- Contact Card -->
         <div class="card">
             <div class="icon">📞</div>
             <h2>Contact</h2>
@@ -225,4 +227,3 @@
 
 </body>
 </html>
-
