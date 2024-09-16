@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Devgna Vyas Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #58a6ff;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #1f6feb;
+        }
+
+        /* Container Styling */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: #161b22;
+            border: 2px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            min-height: 150px;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #8b949e;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1.2s forwards;
+        }
+
+        .icon {
+            font-size: 40px;
+            color: #58a6ff;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        /* Static Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Embed GitHub and LinkedIn */
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .card h2 {
+                font-size: 22px;
+            }
+
+            .card p {
+                font-size: 15px;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #8b949e;
+        }
+
+        /* LinkedIn Feed Grid */
+        .linkedin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .linkedin-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="text-align:center; margin-bottom: 30px;">
+        <h1>Devgna Vyas</h1>
+        <p>Cybersecurity Enthusiast | Linux Geek | Ethical Hacker | Open Source Contributor</p>
+    </header>
+
+    <!-- Main Content Grid -->
+    <div class="container">
+        <!-- About Card -->
+        <div class="card">
+            <div class="icon">👤</div>
+            <h2>About Me</h2>
+            <p>Hello! I'm Devgna, a passionate BCA student exploring cybersecurity and ethical hacking. I love Linux, open-source, and participating in Capture The Flag (CTF) competitions.</p>
+        </div>
+
+        <!-- Projects Card -->
+        <div class="card">
+            <div class="icon">💻</div>
+            <h2>Projects</h2>
+            <p>Here are a few of the projects I am working on:</p>
+            <div class="project-card">
+                <h3>Project 1: AI-ML Security Prototype</h3>
+                <p>A proof-of-concept AI-ML solution focusing on network security vulnerabilities.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2: CharuAI</h3>
+                <p>AI powered virtual assistant for CHARUSAT students and members.</p>
+            </div>
+        </div>
+
+        <!-- Skills Card -->
+        <div class="card">
+            <div class="icon">🛠️</div>
+            <h2>Skills</h2>
+            <ul>
+                <li>Cybersecurity & Ethical Hacking</li>
+                <li>Linux Systems</li>
+                <li>Penetration Testing</li>
+                <li>Programming (C, C++, Rust, Python, Bash, JavaScript)</li>
+                <li>Open-source Software</li>
+                <li>Digital Forensics & Cybercrime</li>
+            </ul>
+        </div>
+
+       <!-- Contact Card -->
+        <div class="card">
+            <div class="icon">📞</div>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:vyasdevgna@gmail.com">vyasdevgna@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919510292044">+91 95102 92044</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/devgna-vyas" target="_blank">LinkedIn Profile</a></p>
+        </div>
+
+        <!-- Download CV Card -->
+        <div class="card">
+            <div class="icon">📄</div>
+            <h2>Resume</h2>
+            <p>Download my resume to learn more about my experience and skills in cybersecurity and open-source contributions.</p>
+            <a href="your-resume-link.pdf" class="btn" download>Download CV</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Devgna Vyas | All Rights Reserved | <a href="https://github.com/vyasdevgna" target="_blank">GitHub</a></p>
+    </footer>
+
+</body>
+</html>
+
